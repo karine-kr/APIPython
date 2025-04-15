@@ -37,7 +37,7 @@ class OrdemDeCompra:
             "ordemId": self.id
           }
              
-             response = requests.get(f"{self.url_petstore_order}/{orderId}")
-             self.status_code = response.status_code
-             return response
+             self.response = requests.get(f"{self.url_petstore_order}/{orderId}")
+             self.status_code = self.response.status_code
+             return self.response
            

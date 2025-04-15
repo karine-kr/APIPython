@@ -8,5 +8,5 @@ Funcionalidade: Efetuar ordem de compra
   Cenário: Buscar um ordem de compra existente pelo id
     Dado que o pedido com id 4 existe
     Quando eu busco o pedido pelo id 4
-    Então deve apresentar status de resposta com 200
-    And o corpo da resposta deve conter o id 4    
+    E apresenta o status de resposta com 200
+    Então o corpo da resposta deve conter o id 4
