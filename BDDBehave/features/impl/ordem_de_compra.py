@@ -27,3 +27,17 @@ class OrdemDeCompra:
           response = requests.post(self.url_petstore_order, headers=header, json=data)
           self.status_code = response.status_code
           return response
+      
+      
+      def get_buscar_ordem_pelo_id(self,orderId):
+             header = {
+              'Accept': 'application/json',
+          }
+             data = {
+            "ordemId": self.id
+          }
+             
+             response = requests.get(f"{self.url_petstore_order}/{orderId}")
+             self.status_code = response.status_code
+             return response
+           
