@@ -26,6 +26,7 @@ class OrdemDeCompra:
           }
           response = requests.post(self.url_petstore_order, headers=header, json=data)
           self.status_code = response.status_code
+          self.response = response
           return response
       
       
