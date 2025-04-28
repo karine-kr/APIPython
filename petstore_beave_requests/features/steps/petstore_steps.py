@@ -38,6 +38,7 @@ def step_impl(context):
 @then('a resposta deve conter os detalhes do usuário')
 def step_impl(context):
     dados_usuario = context.resposta.json()
+    assert "username" in dados_usuario, f"Campo 'username' não encontrado na resposta: {dados_usuario}"
     assert dados_usuario["username"] == context.nome_usuario, f"Esperado username {context.nome_usuario}, mas obtido {dados_usuario['username']}"
 
 @when('eu enviar uma requisição PUT para atualizar o usuário')
