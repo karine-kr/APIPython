@@ -1,6 +1,6 @@
 import requests
 
-URL = "petstore.swagger.io/v2"
+URL = "https://petstore.swagger.io/v2"
 
 def criar_usuario(lista_usuarios):
     url=f"{URL}/user/createWithList"
